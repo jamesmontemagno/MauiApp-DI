@@ -1,40 +1,36 @@
-﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Essentials;
-using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
-namespace MauiApp1
+namespace MauiApp1;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
-    {
 
-        public MainPage(CounterViewModel viewModel)
-        {
-            InitializeComponent();
-            BindingContext = viewModel;
-        }
+    public MainPage(CounterViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
+    }
+}
+
+public class CounterViewModel : BindableObject
+{
+
+    ICommand clickedCommand;
+    public ICommand ClickedCommand => clickedCommand ??= new Command(IncrementCount);
+
+    private void IncrementCount()
+    {
+        Count+=10;
     }
 
-    public class CounterViewModel : BindableObject
+    private int count = 0;
+    public int Count
     {
-
-        ICommand clickedCommand;
-        public ICommand ClickedCommand => clickedCommand ??= new Command(IncrementCount);
-
-        private void IncrementCount()
+        get => count;
+        set
         {
-            Count+=10;
-        }
-
-        private int count = 0;
-        public int Count
-        {
-            get => count;
-            set
-            {
-                count = value;
-                OnPropertyChanged();
-            }
+            count = value;
+            OnPropertyChanged();
         }
     }
 }
