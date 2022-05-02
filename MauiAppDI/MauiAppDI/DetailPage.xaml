@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppDI.DetailPage"             
+             xmlns:viewmodel="clr-namespace:MauiAppDI.ViewModel"
+             x:DataType="viewmodel:DetailViewModel"
+             Title="DetailPage">
+    <StackLayout>
+        <Button 
+                Text="Check Internet"
+                FontAttributes="Bold"
+                Command="{Binding CheckInternetCommand}"
+                HorizontalOptions="Center" />
+
+    </StackLayout>
+</ContentPage>
