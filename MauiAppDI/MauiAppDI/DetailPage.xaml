@@ -5,12 +5,27 @@
              xmlns:viewmodel="clr-namespace:MauiAppDI.ViewModel"
              x:DataType="viewmodel:DetailViewModel"
              Title="DetailPage">
-    <StackLayout>
+    <StackLayout Padding="40">
         <Button 
                 Text="Check Internet"
                 FontAttributes="Bold"
                 Command="{Binding CheckInternetCommand}"
                 HorizontalOptions="Center" />
+
+        <Button Text="Go Back"
+                Command="{Binding BackCommand}"
+                HorizontalOptions="Center"/>
+
+
+        <Button Text="Go to Another One"
+                Command="{Binding GoToAnotherCommand}"
+                HorizontalOptions="Center"/>
+
+        <Label FontSize="50"
+               Text="{Binding Count}"/>
+
+        <Label FontSize="50"
+               Text="{Binding Monkey.Name}"/>
 
     </StackLayout>
 </ContentPage>

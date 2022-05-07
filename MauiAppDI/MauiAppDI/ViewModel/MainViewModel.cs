@@ -1,10 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using MauiAppDI.Model;
 
 namespace MauiAppDI.ViewModel;
 
 public partial class MainViewModel : ObservableObject
 {
+    Monkey monkey;
+    public MainViewModel()
+    {
+        monkey = new Monkey { Name = "Mooch" };
+    }
+
     [ObservableProperty]
     int count;
 
@@ -15,6 +22,10 @@ public partial class MainViewModel : ObservableObject
     }
 
     [ICommand]
-    async Task Navigate() =>
-        await AppShell.Current.GoToAsync(nameof(DetailPage));
+    Task Navigate() => 
+        Shell.Current.GoToAsync($"{nameof(DetailPage)}?Count={Count}",
+            new Dictionary<string, object>
+            {
+                ["Monkey"] = monkey
+            });
 }
