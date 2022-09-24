@@ -15,13 +15,13 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     int count;
 
-    [ICommand]
+    [RelayCommand]
     void IncrementCount()
     {
         Count += 10;
     }
 
-    [ICommand]
+    [RelayCommand]
     Task Navigate() => 
         Shell.Current.GoToAsync($"{nameof(DetailPage)}?Count={Count}",
             new Dictionary<string, object>
