@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppDI", "MauiAppDI\MauiAppDI.csproj", "{281B53A7-61FE-47A0-92B9-1E3949A66513}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppDI.Shared", "MauiAppDI.Shared\MauiAppDI.Shared.csproj", "{616443C3-E37F-48FE-8828-27CB8EAEF560}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{281B53A7-61FE-47A0-92B9-1E3949A66513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{281B53A7-61FE-47A0-92B9-1E3949A66513}.Release|Any CPU.Build.0 = Release|Any CPU
 		{281B53A7-61FE-47A0-92B9-1E3949A66513}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{616443C3-E37F-48FE-8828-27CB8EAEF560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616443C3-E37F-48FE-8828-27CB8EAEF560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616443C3-E37F-48FE-8828-27CB8EAEF560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616443C3-E37F-48FE-8828-27CB8EAEF560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

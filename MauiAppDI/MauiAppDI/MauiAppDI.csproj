@@ -50,4 +50,8 @@
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\MauiAppDI.Shared\MauiAppDI.Shared.csproj" />
+	</ItemGroup>
+
 </Project>
