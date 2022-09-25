@@ -41,6 +41,20 @@
                 HorizontalOptions="Center" />
 
 
+            <Button 
+                Text="Request Bluetooth"
+                FontAttributes="Bold"
+                Command="{Binding RequestBluetoothCommand}"
+                IsVisible="{OnPlatform Android=true, Default=false}"
+                HorizontalOptions="Center" />
+
+
+            <Button 
+                Text="Check Internet"
+                FontAttributes="Bold"
+                Command="{Binding CheckInternetCommand}"
+                HorizontalOptions="Center" />
+
             <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
